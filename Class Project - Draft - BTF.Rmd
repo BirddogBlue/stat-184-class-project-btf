@@ -1,0 +1,82 @@
+---
+title: "Class Project"
+subtitle: "Initital Draft"
+author: Branson T Fausey
+date: Sunday, 17th November, 2024 
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+# cleanup & stock the library shelves
+rm(list = ls())
+library(magrittr)
+library(mosaic)
+library(dcData)
+library(openintro)
+library(tidyverse)
+library(tidyr)
+library(manipulate)
+library(esquisse)
+library(ggplot2)
+library(ggthemes)
+library(dplyr)
+library(printr)
+library(readr)
+library(devtools)
+library(lubridate)
+library(leaflet)
+library(foreign)
+library(data.table)
+library(base)
+library(rvest)
+library(tidytuesdayR)
+library(usmap)
+library(readxl)
+set.seed(184)
+```
+
+___
+
+# Research Question:
+
+*How has Pennsylvania's deer population changed over time, and how does it compare to other states' populations?*
+
+* For clarification, my main interest is the white-tailed deer species, but my analyses and descriptions will include other species of deer, mainly species native to the United States such as white-tailed and mule deer.
+
+___
+
+## Data Sources:
+
+* [Deer Friendly](https://www.deerfriendly.com/)
+
+* [Pennsylvania Deer Harvest 1915 to 2020](https://docs.google.com/spreadsheets/d/1C8gSJWomCEdPSvHPHm7UVd_oGQU6gmsm/edit?gid=1959951972#gid=1959951972)
+
+* [US Deer Population Long-term Chart](https://docs.google.com/spreadsheets/d/1nuAUVkXsp1HkhIlPsiNFG_BzyO5HOYdS01jqrYXX-FY/edit?gid=1580702380#gid=1580702380)
+
+* [Texas Deer Population 2000 to 2021](https://docs.google.com/spreadsheets/d/1GLy-Knmp_IzJALFd01E2bJCG8h0Ow3I4S9nCl7PDnbE/edit?gid=0#gid=0)
+
+* [Nevada Mule Deer Population](https://docs.google.com/spreadsheets/d/1ZIL0-G_3x3nTbz_pz135ttUocQLy2OuIecnBJgdgpIM/edit?gid=0#gid=0)
+
+___
+
+Texas is reported to host the largest deer population in the country, while Nevada is reported to have the least amount of deer for a state in the contiguous US.
+
+The PA and US data sources are cluttered with images and descriptions that follow no sense of data organization, so without changing any values, I simply remove the unnecessary  bits in the Excel files to import.
+
+The TX and NV data sets can be read-in okay without adjustments.
+
+___
+
+```{r}
+PAdeerharvest <- read_excel("PAdeerharvest.xlsx")
+USdeerpop <- read_excel("USdeerpop.xlsx")
+TXdeerpop <- read_excel("TXdeerpop.xlsx")
+NVdeerpop <- read_excel("NVdeerpop.xlsx")
+```
+
+
+
+
+
+
+
